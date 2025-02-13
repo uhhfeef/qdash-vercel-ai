@@ -8,7 +8,7 @@ export const action: ActionFunction = async ({ request, params }) => {
 
     const result = streamText({
         model: openai('gpt-4o-mini'),
-        system: 'You are a helpful assistant.',
+        system: 'You are a helpful assistant. If the user asks for code, generate it within <code></code> tags. No fluff.',
         messages,
       });
     

@@ -1,7 +1,5 @@
-import { useState, useRef, useEffect } from "react";
 import type { MetaFunction } from "@remix-run/node";
 import { useChat } from "@ai-sdk/react";
-import { ChatInput } from "./components/ChatInput";
 import { ArrowUp, Paperclip } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
@@ -27,17 +25,6 @@ export default function Index() {
 
   return (
     <>
-      {/* {messages.map(message => (
-        <div key={message.id}>
-          {message.role === 'user' ? 'User: ' : 'AI: '}
-          {message.content}
-        </div>
-      ))}
-
-      <form onSubmit={handleSubmit}>
-        <input name="prompt" value={input} onChange={handleInputChange} />
-        <button type="submit">Submit</button>
-      </form> */}
       <div className="flex flex-col h-[calc(100vh-4rem)] overflow-y-auto overflow-x-hidden">
         <div className="h-full flex flex-col items-center w-full max-w-3xl mx-auto">
           <div className="flex-grow overflow-auto w-full p-4 overflow-y-auto">
